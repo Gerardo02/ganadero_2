@@ -1,5 +1,5 @@
-html {
-  background: url(./images/Mesa\de\trabajo\1png) no-repeat center center fixed;
+/*html {
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,11 +7,21 @@ html {
   margin: 0px;
   padding: 0px;
 }
-body {
-  min-height: 100vh;
+*/
+.elf {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+  margin: 0px;
   padding: 0px;
-  margin: 0;
-  font-family: sans-serif;
+}
+body {
+  margin: 0px;
+  padding: 0px;
 }
 /*
 .iconos{

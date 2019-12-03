@@ -40,6 +40,39 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.on("ready", createWindow);
 
+const mainMenuTemplate = [
+  {
+    label: `File`,
+    submenu: [
+      {
+        label: "hola"
+      },
+      {
+        label: "Salir",
+        accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
+        click() {
+          app.quit();
+        }
+      }
+    ]
+  }
+];
+mainMenuTemplate.push({
+  label: "Dev tools",
+  submenu: [
+    {
+      label: "Sacar dev tools",
+      accelerator: "Ctrl+I",
+      click(item, focusedWindow) {
+        focusedWindow.toggleDevTools();
+      }
+    },
+    {
+      role: "reload"
+    }
+  ]
+});
+
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {
   // On macOS it is common for applications and their menu bar
